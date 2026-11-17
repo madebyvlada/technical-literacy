@@ -1,0 +1,628 @@
+{
+  "status": "proposed; not implemented",
+  "mappings": [
+    {
+      "figmaName": "var(--color-text-primary)",
+      "proposedCssName": "--color-text-primary",
+      "sourceValue": "#111111",
+      "proposedCssValue": "#111111",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-l/tracking",
+      "proposedCssName": "--type-title-l-tracking",
+      "sourceValue": "-0.5",
+      "proposedCssValue": "-0.5px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-l/size",
+      "proposedCssName": "--type-title-l-size",
+      "sourceValue": "28",
+      "proposedCssValue": "28px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-l/weight",
+      "proposedCssName": "--type-title-l-weight",
+      "sourceValue": "SemiBold",
+      "proposedCssValue": "600",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/family",
+      "proposedCssName": "--type-family",
+      "sourceValue": "Manrope",
+      "proposedCssValue": "\"Manrope\", sans-serif",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-l/line-height",
+      "proposedCssName": "--type-title-l-line-height",
+      "sourceValue": "34",
+      "proposedCssValue": "34px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Title/L",
+      "proposedCssName": "--title-l",
+      "sourceValue": "Font(family: \"type/family\", style: type/title-l/weight, size: type/title-l/size, weight: 600, lineHeight: type/title-l/line-height, letterSpacing: type/title-l/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "var(--color-text-secondary)",
+      "proposedCssName": "--color-text-secondary",
+      "sourceValue": "#6e6e73",
+      "proposedCssValue": "#6e6e73",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/caption/tracking",
+      "proposedCssName": "--type-caption-tracking",
+      "sourceValue": "0",
+      "proposedCssValue": "0px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/caption/size",
+      "proposedCssName": "--type-caption-size",
+      "sourceValue": "13",
+      "proposedCssValue": "13px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/caption/weight",
+      "proposedCssName": "--type-caption-weight",
+      "sourceValue": "Medium",
+      "proposedCssValue": "500",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/caption/line-height",
+      "proposedCssName": "--type-caption-line-height",
+      "sourceValue": "18",
+      "proposedCssValue": "18px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Caption",
+      "proposedCssName": "--caption",
+      "sourceValue": "Font(family: \"type/family\", style: type/caption/weight, size: type/caption/size, weight: 500, lineHeight: type/caption/line-height, letterSpacing: type/caption/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "type/display-amount/tracking",
+      "proposedCssName": "--type-display-amount-tracking",
+      "sourceValue": "-1.2000000476837158",
+      "proposedCssValue": "-1.2000000476837158px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/display-amount/size",
+      "proposedCssName": "--type-display-amount-size",
+      "sourceValue": "48",
+      "proposedCssValue": "48px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/display-amount/weight",
+      "proposedCssName": "--type-display-amount-weight",
+      "sourceValue": "SemiBold",
+      "proposedCssValue": "600",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/display-amount/line-height",
+      "proposedCssName": "--type-display-amount-line-height",
+      "sourceValue": "52",
+      "proposedCssValue": "52px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Display/Amount",
+      "proposedCssName": "--display-amount",
+      "sourceValue": "Font(family: \"type/family\", style: type/display-amount/weight, size: type/display-amount/size, weight: 600, lineHeight: type/display-amount/line-height, letterSpacing: type/display-amount/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "var(--color-text-tertiary)",
+      "proposedCssName": "--color-text-tertiary",
+      "sourceValue": "#b1b1b1",
+      "proposedCssValue": "#b1b1b1",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/display-currency/tracking",
+      "proposedCssName": "--type-display-currency-tracking",
+      "sourceValue": "-1.2000000476837158",
+      "proposedCssValue": "-1.2000000476837158px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/display-currency/size",
+      "proposedCssName": "--type-display-currency-size",
+      "sourceValue": "30",
+      "proposedCssValue": "30px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/display-currency/weight",
+      "proposedCssName": "--type-display-currency-weight",
+      "sourceValue": "SemiBold",
+      "proposedCssValue": "600",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/display-currency/line-height",
+      "proposedCssName": "--type-display-currency-line-height",
+      "sourceValue": "52",
+      "proposedCssValue": "52px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Display/Currency",
+      "proposedCssName": "--display-currency",
+      "sourceValue": "Font(family: \"type/family\", style: type/display-currency/weight, size: type/display-currency/size, weight: 600, lineHeight: type/display-currency/line-height, letterSpacing: type/display-currency/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "gap/inline",
+      "proposedCssName": "--gap-inline",
+      "sourceValue": "8",
+      "proposedCssValue": "8px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "gap/tight",
+      "proposedCssName": "--gap-tight",
+      "sourceValue": "4",
+      "proposedCssValue": "4px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "padding/card",
+      "proposedCssName": "--padding-card",
+      "sourceValue": "16",
+      "proposedCssValue": "16px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--radius-l)",
+      "proposedCssName": "--radius-l",
+      "sourceValue": "24",
+      "proposedCssValue": "24px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-bg-surface)",
+      "proposedCssName": "--color-bg-surface",
+      "sourceValue": "#ffffff",
+      "proposedCssValue": "#ffffff",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-shadow-near)",
+      "proposedCssName": "--color-shadow-near",
+      "sourceValue": "#0000000a",
+      "proposedCssValue": "#0000000a",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-shadow-far)",
+      "proposedCssName": "--color-shadow-far",
+      "sourceValue": "#0000000f",
+      "proposedCssValue": "#0000000f",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Elevation/Card",
+      "proposedCssName": "--elevation-card",
+      "sourceValue": "Effect(type: DROP_SHADOW, color: var(--color-shadow-near), offset: (0, 1), radius: 2, spread: 0); Effect(type: DROP_SHADOW, color: var(--color-shadow-far), offset: (0, 8), radius: 24, spread: 0)",
+      "proposedCssValue": null,
+      "category": "effect-style"
+    },
+    {
+      "figmaName": "var(--color-icon-primary)",
+      "proposedCssName": "--color-icon-primary",
+      "sourceValue": "#111111",
+      "proposedCssValue": "#111111",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--size-icon-l)",
+      "proposedCssName": "--size-icon-l",
+      "sourceValue": "24",
+      "proposedCssValue": "24px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--size-control-l)",
+      "proposedCssName": "--size-control-l",
+      "sourceValue": "56",
+      "proposedCssValue": "56px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--radius-m)",
+      "proposedCssName": "--radius-m",
+      "sourceValue": "16",
+      "proposedCssValue": "16px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/label-s/tracking",
+      "proposedCssName": "--type-label-s-tracking",
+      "sourceValue": "0",
+      "proposedCssValue": "0px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/label-s/size",
+      "proposedCssName": "--type-label-s-size",
+      "sourceValue": "12",
+      "proposedCssValue": "12px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/label-s/weight",
+      "proposedCssName": "--type-label-s-weight",
+      "sourceValue": "SemiBold",
+      "proposedCssValue": "600",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/label-s/line-height",
+      "proposedCssName": "--type-label-s-line-height",
+      "sourceValue": "16",
+      "proposedCssValue": "16px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Label/S",
+      "proposedCssName": "--label-s",
+      "sourceValue": "Font(family: \"type/family\", style: type/label-s/weight, size: type/label-s/size, weight: 600, lineHeight: type/label-s/line-height, letterSpacing: type/label-s/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "gap/none",
+      "proposedCssName": "--gap-none",
+      "sourceValue": "0",
+      "proposedCssValue": "0px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-s/tracking",
+      "proposedCssName": "--type-title-s-tracking",
+      "sourceValue": "0",
+      "proposedCssValue": "0px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-s/size",
+      "proposedCssName": "--type-title-s-size",
+      "sourceValue": "17",
+      "proposedCssValue": "17px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-s/weight",
+      "proposedCssName": "--type-title-s-weight",
+      "sourceValue": "SemiBold",
+      "proposedCssValue": "600",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-s/line-height",
+      "proposedCssName": "--type-title-s-line-height",
+      "sourceValue": "22",
+      "proposedCssValue": "22px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Title/S",
+      "proposedCssName": "--title-s",
+      "sourceValue": "Font(family: \"type/family\", style: type/title-s/weight, size: type/title-s/size, weight: 600, lineHeight: type/title-s/line-height, letterSpacing: type/title-s/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "type/body-m/tracking",
+      "proposedCssName": "--type-body-m-tracking",
+      "sourceValue": "0",
+      "proposedCssValue": "0px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/body-m/size",
+      "proposedCssName": "--type-body-m-size",
+      "sourceValue": "15",
+      "proposedCssValue": "15px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/body-m/weight",
+      "proposedCssName": "--type-body-m-weight",
+      "sourceValue": "Medium",
+      "proposedCssValue": "500",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/body-m/line-height",
+      "proposedCssName": "--type-body-m-line-height",
+      "sourceValue": "20",
+      "proposedCssValue": "20px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Body/M",
+      "proposedCssName": "--body-m",
+      "sourceValue": "Font(family: \"type/family\", style: type/body-m/weight, size: type/body-m/size, weight: 500, lineHeight: type/body-m/line-height, letterSpacing: type/body-m/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "var(--color-icon-secondary)",
+      "proposedCssName": "--color-icon-secondary",
+      "sourceValue": "#6e6e73",
+      "proposedCssValue": "#6e6e73",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--size-icon-s)",
+      "proposedCssName": "--size-icon-s",
+      "sourceValue": "16",
+      "proposedCssValue": "16px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-m/tracking",
+      "proposedCssName": "--type-title-m-tracking",
+      "sourceValue": "-0.5",
+      "proposedCssValue": "-0.5px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-m/size",
+      "proposedCssName": "--type-title-m-size",
+      "sourceValue": "22",
+      "proposedCssValue": "22px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-m/weight",
+      "proposedCssName": "--type-title-m-weight",
+      "sourceValue": "SemiBold",
+      "proposedCssValue": "600",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/title-m/line-height",
+      "proposedCssName": "--type-title-m-line-height",
+      "sourceValue": "28",
+      "proposedCssValue": "28px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Title/M",
+      "proposedCssName": "--title-m",
+      "sourceValue": "Font(family: \"type/family\", style: type/title-m/weight, size: type/title-m/size, weight: 600, lineHeight: type/title-m/line-height, letterSpacing: type/title-m/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "type/label-l/tracking",
+      "proposedCssName": "--type-label-l-tracking",
+      "sourceValue": "0",
+      "proposedCssValue": "0px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/label-l/size",
+      "proposedCssName": "--type-label-l-size",
+      "sourceValue": "15",
+      "proposedCssValue": "15px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/label-l/weight",
+      "proposedCssName": "--type-label-l-weight",
+      "sourceValue": "SemiBold",
+      "proposedCssValue": "600",
+      "category": "variable"
+    },
+    {
+      "figmaName": "type/label-l/line-height",
+      "proposedCssName": "--type-label-l-line-height",
+      "sourceValue": "20",
+      "proposedCssValue": "20px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Label/L",
+      "proposedCssName": "--label-l",
+      "sourceValue": "Font(family: \"type/family\", style: type/label-l/weight, size: type/label-l/size, weight: 600, lineHeight: type/label-l/line-height, letterSpacing: type/label-l/tracking)",
+      "proposedCssValue": null,
+      "category": "text-style"
+    },
+    {
+      "figmaName": "gap/item",
+      "proposedCssName": "--gap-item",
+      "sourceValue": "16",
+      "proposedCssValue": "16px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--radius-full)",
+      "proposedCssName": "--radius-full",
+      "sourceValue": "999",
+      "proposedCssValue": "999px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-indicator-active)",
+      "proposedCssName": "--color-indicator-active",
+      "sourceValue": "#111111",
+      "proposedCssValue": "#111111",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--size-indicator)",
+      "proposedCssName": "--size-indicator",
+      "sourceValue": "8",
+      "proposedCssValue": "8px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-indicator-inactive)",
+      "proposedCssName": "--color-indicator-inactive",
+      "sourceValue": "#b1b1b1",
+      "proposedCssValue": "#b1b1b1",
+      "category": "variable"
+    },
+    {
+      "figmaName": "gap/part",
+      "proposedCssName": "--gap-part",
+      "sourceValue": "12",
+      "proposedCssValue": "12px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--size-control)",
+      "proposedCssName": "--size-control",
+      "sourceValue": "40",
+      "proposedCssValue": "40px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--radius-s)",
+      "proposedCssName": "--radius-s",
+      "sourceValue": "8",
+      "proposedCssValue": "8px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-bg-control)",
+      "proposedCssName": "--color-bg-control",
+      "sourceValue": "#f3f3f4",
+      "proposedCssValue": "#f3f3f4",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-border-divider)",
+      "proposedCssName": "--color-border-divider",
+      "sourceValue": "#ededed",
+      "proposedCssValue": "#ededed",
+      "category": "variable"
+    },
+    {
+      "figmaName": "padding/row",
+      "proposedCssName": "--padding-row",
+      "sourceValue": "12",
+      "proposedCssValue": "12px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "gap/block",
+      "proposedCssName": "--gap-block",
+      "sourceValue": "32",
+      "proposedCssValue": "32px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "padding/screen",
+      "proposedCssName": "--padding-screen",
+      "sourceValue": "16",
+      "proposedCssValue": "16px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "padding/screen-bottom",
+      "proposedCssName": "--padding-screen-bottom",
+      "sourceValue": "24",
+      "proposedCssValue": "24px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "Text/Main/Primary",
+      "proposedCssName": "--text-main-primary",
+      "sourceValue": "#000000d9",
+      "proposedCssValue": null,
+      "category": "unmapped-legacy-color"
+    },
+    {
+      "figmaName": "var(--color-icon-inverse)",
+      "proposedCssName": "--color-icon-inverse",
+      "sourceValue": "#ffffff",
+      "proposedCssValue": "#ffffff",
+      "category": "variable"
+    },
+    {
+      "figmaName": "padding/none",
+      "proposedCssName": "--padding-none",
+      "sourceValue": "0",
+      "proposedCssValue": "0px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--size-tab)",
+      "proposedCssName": "--size-tab",
+      "sourceValue": "48",
+      "proposedCssValue": "48px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-bg-inverse)",
+      "proposedCssName": "--color-bg-inverse",
+      "sourceValue": "#111111",
+      "proposedCssValue": "#111111",
+      "category": "variable"
+    },
+    {
+      "figmaName": "padding/compact",
+      "proposedCssName": "--padding-compact",
+      "sourceValue": "8",
+      "proposedCssValue": "8px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "padding/control",
+      "proposedCssName": "--padding-control",
+      "sourceValue": "16",
+      "proposedCssValue": "16px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--size-tab-bar)",
+      "proposedCssName": "--size-tab-bar",
+      "sourceValue": "64",
+      "proposedCssValue": "64px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--radius-xl)",
+      "proposedCssName": "--radius-xl",
+      "sourceValue": "32",
+      "proposedCssValue": "32px",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-bg-app)",
+      "proposedCssName": "--color-bg-app",
+      "sourceValue": "#f3f3f4",
+      "proposedCssValue": "#f3f3f4",
+      "category": "variable"
+    },
+    {
+      "figmaName": "var(--color-bg-app-fade)",
+      "proposedCssName": "--color-bg-app-fade",
+      "sourceValue": "#f3f3f400",
+      "proposedCssValue": "#f3f3f400",
+      "category": "variable"
+    }
+  ]
+}
