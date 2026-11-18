@@ -8,7 +8,7 @@ export default function AccountsPage() {
     <main className="accounts-page">
       <header className="accounts-page__header">
         <p className="type-caption accounts-page__note">Можно · учебный прототип</p>
-        <h1 className="type-title-l">Счета</h1>
+        <h1 className="type-title-l">Мои счета</h1>
       </header>
       <section className="accounts-pockets" aria-labelledby="pockets-heading">
         <h2 id="pockets-heading" className="type-title-s">Кармашки · {demoPockets.length}</h2>

@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("четыре учебных кармашка доступны без входа и ключей", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: "Счета", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Мои счета", exact: true })).toBeVisible();
   const pockets = page.getByRole("region", { name: "Кармашки · 4", exact: true });
   const cards = pockets.getByRole("listitem");
   await expect(cards).toHaveCount(4);
