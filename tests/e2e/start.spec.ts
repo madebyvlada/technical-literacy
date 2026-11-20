@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 
-test("четыре учебных кармашка доступны без входа и ключей", async ({ page }) => {
+test("семь учебных кармашков доступны без входа и ключей", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: "Мои счета", exact: true })).toBeVisible();
-  const pockets = page.getByRole("region", { name: "Кармашки · 4", exact: true });
+  await expect(page.getByRole("heading", { name: "Счета", exact: true })).toBeVisible();
+  const pockets = page.getByRole("region", { name: "Кармашки · 7", exact: true });
   const cards = pockets.getByRole("listitem");
   await expect(cards).toHaveCount(4);
   // Independent expected examples catch wrong amounts or mismatched names.
@@ -17,6 +17,9 @@ test("четыре учебных кармашка доступны без вх�
     const card = cards.filter({ has: page.getByText(pocket.name, { exact: true }) });
     await expect(card.getByText(pocket.amount, { exact: true })).toBeVisible();
   }
+  await page.getByRole("button", { name: "Страница 2" }).press("Enter");
+  await expect(cards).toHaveCount(3);
+  await expect(cards.getByText("Подписки", { exact: true })).toBeVisible();
 });
 
 test("серверный маршрут по-прежнему отвечает без ключей", async ({ request }) => {
@@ -28,7 +31,7 @@ test("серверный маршрут по-прежнему отвечает �
 test("кармашки читаются на узком экране без горизонтального переполнения", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 700 });
   await page.goto("/");
-  await expect(page.getByRole("listitem")).toHaveCount(4);
-  await expect(page.getByText("25 000 ₽", { exact: true })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Кармашки · 7" }).getByRole("listitem")).toHaveCount(4);
+  await expect(page.getByRole("region", { name: "Кармашки · 7" }).getByText("25 000 ₽", { exact: true })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
 });

@@ -139,10 +139,11 @@ label { display: block; }
 @media (max-width: 359px) { .ds-pocket-grid { grid-template-columns: minmax(0, 1fr); } }
 
 .accounts-page {
-  max-width: 393px;
+  --screen-width: 393px;
+  max-width: var(--screen-width);
   min-height: 100svh;
   margin: 0 auto;
-  padding: var(--gap-block) var(--padding-screen) var(--padding-screen-bottom);
+  padding: var(--gap-block) var(--padding-screen) calc(var(--size-tab-bar) + var(--padding-screen-bottom) + var(--gap-block) + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   gap: var(--gap-block);
@@ -165,3 +166,109 @@ label { display: block; }
 @media (max-width: 359px) {
   .accounts-pockets__grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+.product-panel {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-l);
+  padding: var(--padding-card);
+}
+.accounts-balance { display: grid; gap: var(--gap-tight); box-shadow: var(--shadow-pocket-card); }
+.accounts-balance__estimate { white-space: nowrap; }
+.accounts-balance .type-display-currency { color: var(--color-text-tertiary); }
+.accounts-actions { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.accounts-actions button {
+  display: grid;
+  justify-items: center;
+  gap: var(--gap-inline);
+  font-size: var(--type-label-s-size);
+  font-weight: var(--type-label-s-weight);
+  overflow-wrap: anywhere;
+}
+.accounts-actions button span {
+  display: grid;
+  place-items: center;
+  width: var(--size-control-l);
+  height: var(--size-control-l);
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-m);
+}
+.accounts-section-header, .pocket-details__toolbar, .pocket-details__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-inline);
+}
+.accounts-section-header button { display: flex; align-items: center; gap: var(--gap-tight); color: var(--color-text-secondary); }
+.pocket-link { display: grid; min-width: 0; border-radius: var(--radius-l); }
+.pocket-card__amount { display: flex; align-items: center; justify-content: space-between; gap: var(--gap-tight); width: 100%; }
+.pocket-card__amount img { flex: none; }
+.pocket-carousel { touch-action: pan-y pinch-zoom; }
+.pocket-carousel__controls { display: flex; justify-content: center; margin-bottom: calc(-1 * var(--gap-part)); }
+.pocket-carousel__controls button { min-height: var(--size-control); min-width: var(--size-control); display: grid; place-items: center; }
+.pocket-carousel__controls button::after {
+  content: "";
+  width: var(--size-indicator);
+  height: var(--size-indicator);
+  background: var(--color-indicator-inactive);
+  border-radius: var(--radius-full);
+}
+.pocket-carousel__controls button[aria-pressed="true"]::after {
+  width: calc(var(--size-indicator) + var(--gap-part));
+  background: var(--color-indicator-active);
+}
+.accounts-schedule { list-style: none; margin: 0; padding-block: 0; }
+.accounts-schedule li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--gap-part);
+  align-items: center;
+  padding-block: var(--padding-row);
+}
+.accounts-schedule li + li { border-top: 1px solid var(--color-border-divider); }
+.accounts-schedule__icon {
+  display: grid;
+  place-items: center;
+  width: var(--size-control);
+  height: var(--size-control);
+  background: var(--color-bg-control);
+  border-radius: var(--radius-s);
+}
+.accounts-nav {
+  position: fixed;
+  bottom: calc(var(--padding-screen-bottom) + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 2 * var(--padding-screen)), calc(var(--screen-width) - 2 * var(--padding-screen)));
+  min-height: var(--size-tab-bar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-tight);
+  padding: var(--padding-compact);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-surface);
+  box-shadow: var(--shadow-pocket-card);
+  z-index: 1;
+}
+.accounts-nav :is(button, a) { display: flex; align-items: center; justify-content: center; gap: var(--gap-inline); min-width: var(--size-control); min-height: var(--size-tab); }
+.accounts-nav a[aria-current="page"] { background: var(--color-bg-inverse); border-radius: var(--radius-full); min-width: var(--size-tab); }
+.accounts-page :is(button, a):focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 2px; }
+.product-button {
+  min-height: var(--size-control-l);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--padding-control);
+  border-radius: var(--radius-full);
+  font-weight: var(--type-label-l-weight);
+}
+.product-button--primary { background: var(--color-brand-yellow); }
+.demo-state { display: grid; gap: var(--gap-item); }
+.demo-state .product-button { background: var(--color-bg-inverse); color: var(--color-icon-inverse); justify-self: start; }
+.demo-state__placeholder { min-height: var(--size-tab-bar); border-radius: var(--radius-m); background: var(--color-bg-control); }
+.pocket-details { gap: var(--padding-screen-bottom); }
+.pocket-details__icon-button { display: grid; place-items: center; inline-size: var(--size-control); block-size: var(--size-control); }
+.pocket-details__amount { font-size: var(--type-pocket-amount-size); line-height: var(--type-pocket-amount-line-height); font-weight: var(--type-title-l-weight); }
+.pocket-details__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-inline); }
+.pocket-details__plan { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--gap-part); }
+.pocket-details__operations { display: grid; gap: var(--gap-inline); }

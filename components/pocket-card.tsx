@@ -5,13 +5,17 @@ type PocketCardProps = {
   name: string;
   meta?: string;
   className?: string;
+  icon?: string;
 };
 
-/** Figma PocketCard 938:3682. Display-only until an action is explicitly added. */
-export function PocketCard({ amount, name, meta, className }: PocketCardProps) {
+/** Figma PocketCard 938:3682. Navigation is provided by the caller. */
+export function PocketCard({ amount, name, meta, className, icon }: PocketCardProps) {
   return (
     <div className={cn("pocket-card", className)} data-component="pocket-card">
-      <p className="type-title-m">{amount}</p>
+      <div className="pocket-card__amount">
+        <p className="type-title-m">{amount}</p>
+        {icon && <img src={icon} alt="" />}
+      </div>
       <p className="type-label-l">{name}</p>
       {meta ? <p className="type-caption pocket-card__meta">{meta}</p> : null}
     </div>

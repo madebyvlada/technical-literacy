@@ -80,3 +80,10 @@
   --color-bg-app-fade: #f3f3f400;
   --shadow-pocket-card: 0 1px 2px 0 var(--color-shadow-near), 0 8px 24px 0 var(--color-shadow-far);
 }
+
+/* «Можно в2», Accounts 941:5801 and PocketDetails 40000192:8861. */
+:root {
+  --color-brand-yellow: #ffec5a;
+  --type-pocket-amount-size: 36px;
+  --type-pocket-amount-line-height: 44px;
+}
