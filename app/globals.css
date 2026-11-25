@@ -288,6 +288,6 @@ label { display: block; }
 .pocket-carousel__controls button[aria-pressed="true"] { min-width: calc(var(--size-indicator) + var(--gap-part)); }
 .pocket-details__toolbar { margin-bottom: var(--gap-part); }
 .pocket-details__balance { display: grid; gap: var(--gap-tight); padding-inline: calc(var(--padding-card) + var(--gap-tight)); }
-.pocket-details__history-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--gap-part); }
+.pocket-details__history-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--gap-part);padding-block: var(--padding-row); }
 .pocket-details__history-row > :last-child { white-space: nowrap; }
 .product-button--on-app { background: var(--color-bg-surface); }
