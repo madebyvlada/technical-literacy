@@ -83,7 +83,7 @@
 
 /* «Можно в2», Accounts 941:5801 and PocketDetails 40000192:8861. */
 :root {
-  --color-brand-yellow: #ffec5a;
-  --type-pocket-amount-size: 36px;
-  --type-pocket-amount-line-height: 44px;
+  --color-brand-yellow: #ffe627;
+  --type-pocket-amount-size: 48px;
+  --type-pocket-amount-line-height: 52px;
 }

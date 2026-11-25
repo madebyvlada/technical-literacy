@@ -6,7 +6,7 @@ import { PocketCard } from "@/components/pocket-card";
 import { type DemoPocket, formatRubles } from "@/lib/demo-pockets";
 
 export function PocketCarousel({ pockets }: { pockets: readonly DemoPocket[] }) {
-  const pages = [pockets.slice(0, 4), pockets.slice(4)];
+  const pages = Array.from({ length: Math.ceil(pockets.length / 4) }, (_, page) => pockets.slice(page * 4, (page + 1) * 4));
   const [index, setIndex] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
@@ -25,24 +25,35 @@ export function PocketCarousel({ pockets }: { pockets: readonly DemoPocket[] }) 
         const touch = event.changedTouches[0];
         const deltaX = touch.clientX - start.x;
         if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(touch.clientY - start.y)) {
-          setIndex(deltaX > 0 ? 0 : 1);
+          setIndex((page) => Math.max(0, Math.min(pages.length - 1, page + (deltaX > 0 ? -1 : 1))));
         }
       }}
     >
-      <ul className="accounts-pockets__grid" role="list" aria-label={`Страница кармашков ${index + 1} из 2`}>
-        {pages[index].map((pocket) => (
-          <li key={pocket.id}>
-            <Link className="pocket-link" href={`/pockets/${pocket.id}`}>
-              <PocketCard
-                name={pocket.name}
-                amount={formatRubles(pocket.amountRubles)}
-                meta={pocket.meta}
-                icon={`/accounts/${pocket.id}.svg`}
-              />
-            </Link>
-          </li>
+      <div className="pocket-carousel__pages">
+        {pages.map((pocketsOnPage, pageIndex) => (
+          <ul
+            key={pageIndex}
+            className="accounts-pockets__grid"
+            role="list"
+            aria-label={`Страница кармашков ${pageIndex + 1} из ${pages.length}`}
+            aria-hidden={index !== pageIndex || undefined}
+            inert={index !== pageIndex}
+          >
+            {pocketsOnPage.map((pocket) => (
+              <li key={pocket.id}>
+                <Link className="pocket-link" href={`/pockets/${pocket.id}`}>
+                  <PocketCard
+                    name={pocket.name}
+                    amount={formatRubles(pocket.amountRubles)}
+                    meta={pocket.meta}
+                    icon={`/accounts/${pocket.id}.svg`}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
         ))}
-      </ul>
+      </div>
       <div className="pocket-carousel__controls" role="group" aria-label="Страницы кармашков">
         {pages.map((_, pageIndex) => (
           <button

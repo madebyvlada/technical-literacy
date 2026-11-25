@@ -266,9 +266,28 @@ label { display: block; }
 .demo-state { display: grid; gap: var(--gap-item); }
 .demo-state .product-button { background: var(--color-bg-inverse); color: var(--color-icon-inverse); justify-self: start; }
 .demo-state__placeholder { min-height: var(--size-tab-bar); border-radius: var(--radius-m); background: var(--color-bg-control); }
-.pocket-details { gap: var(--padding-screen-bottom); }
+.pocket-details { padding-top: var(--padding-screen); gap: var(--gap-item); }
 .pocket-details__icon-button { display: grid; place-items: center; inline-size: var(--size-control); block-size: var(--size-control); }
 .pocket-details__amount { font-size: var(--type-pocket-amount-size); line-height: var(--type-pocket-amount-line-height); font-weight: var(--type-title-l-weight); }
 .pocket-details__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-inline); }
-.pocket-details__plan { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--gap-part); }
+.pocket-details__plan { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: var(--gap-part); }
 .pocket-details__operations { display: grid; gap: var(--gap-inline); }
+
+/* KT-2 visual review against the working Figma file, 25 November. */
+.accounts-overview { padding-top: var(--padding-screen); }
+.accounts-overview .accounts-actions { line-height: var(--type-label-s-line-height); }
+.accounts-overview .accounts-balance .type-display-amount { font-variant-numeric: lining-nums proportional-nums; }
+.pocket-carousel__pages { display: grid; grid-template-rows: repeat(2, 1fr); gap: var(--gap-item); }
+.pocket-carousel__pages > .accounts-pockets__grid { grid-area: 1 / 1 / -1 / -1; grid-template-rows: subgrid; }
+.pocket-carousel__pages > [inert] { visibility: hidden; }
+@media (max-width: 359px) {
+  .pocket-carousel__pages { grid-template-rows: repeat(4, 1fr); }
+}
+.pocket-carousel__controls { margin-top: calc(-1 * var(--gap-tight)); }
+.pocket-carousel__controls button { min-width: calc(var(--size-indicator) + var(--gap-inline)); }
+.pocket-carousel__controls button[aria-pressed="true"] { min-width: calc(var(--size-indicator) + var(--gap-part)); }
+.pocket-details__toolbar { margin-bottom: var(--gap-part); }
+.pocket-details__balance { display: grid; gap: var(--gap-tight); padding-inline: calc(var(--padding-card) + var(--gap-tight)); }
+.pocket-details__history-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--gap-part); }
+.pocket-details__history-row > :last-child { white-space: nowrap; }
+.product-button--on-app { background: var(--color-bg-surface); }

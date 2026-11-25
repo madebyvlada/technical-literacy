@@ -5,10 +5,10 @@ const scenarios = [
   ["accounts-loading", "/?state=loading", "Загружаем счета"],
   ["accounts-empty", "/?state=empty", "Кармашков пока нет"],
   ["accounts-error", "/?state=error", "Не удалось загрузить счета"],
-  ["pocket", "/pockets/rent", "Аренда"],
-  ["pocket-loading", "/pockets/rent?state=loading", "Загружаем кармашек"],
-  ["pocket-empty", "/pockets/rent?state=empty", "Кармашек не найден"],
-  ["pocket-error", "/pockets/rent?state=error", "Не удалось загрузить кармашек"],
+  ["pocket", "/pockets/food", "Еда"],
+  ["pocket-loading", "/pockets/food?state=loading", "Загружаем кармашек"],
+  ["pocket-empty", "/pockets/food?state=empty", "Кармашек не найден"],
+  ["pocket-error", "/pockets/food?state=error", "Не удалось загрузить кармашек"],
 ] as const;
 
 for (const width of [375, 768, 1440]) {
@@ -32,9 +32,10 @@ for (const width of [375, 768, 1440]) {
 test("переход в кармашек, возврат, отсутствующий кармашек и повтор после ошибки", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("region", { name: "Баланс" })).toContainText("63 190");
-  await page.getByRole("link", { name: /Аренда/ }).press("Enter");
-  await expect(page.getByRole("heading", { name: "Аренда", exact: true })).toBeVisible();
-  await expect(page.getByRole("region", { name: "Баланс" })).toContainText("25 000 ₽");
+  await page.getByRole("button", { name: "Страница 2" }).click();
+  await page.getByRole("link", { name: /Еда/ }).press("Enter");
+  await expect(page.getByRole("heading", { name: "Еда", exact: true })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Баланс" })).toContainText("7 300 ₽");
   await expect(page.getByRole("button", { name: "Пополнить" })).toBeDisabled();
   await page.getByRole("link", { name: "Назад к счетам" }).click();
   await expect(page.getByRole("heading", { name: "Счета", exact: true })).toBeVisible();
@@ -42,7 +43,7 @@ test("переход в кармашек, возврат, отсутствующ
   await page.goto("/pockets/unknown");
   await expect(page.getByRole("heading", { name: "Кармашек не найден" })).toBeVisible();
 
-  for (const url of ["/", "/pockets/rent"]) {
+  for (const url of ["/", "/pockets/food"]) {
     await page.goto(`${url}?state=error`);
     await page.getByRole("link", { name: "Повторить" }).press("Enter");
     await expect.poll(() => new URL(page.url()).pathname + new URL(page.url()).search).toBe(url);

@@ -4,7 +4,7 @@ for (const width of [320, 360, 393]) {
   test(`кармашки одинаковой высоты и текст помещается при ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 852 });
     await page.goto("/");
-    const cards = page.locator('[data-component="pocket-card"]');
+    const cards = page.locator('[data-component="pocket-card"]:visible');
     await expect(cards).toHaveCount(4);
     await page.evaluate(() => document.fonts.ready);
 
@@ -27,5 +27,15 @@ for (const width of [320, 360, 393]) {
     expect(contentFits).toBeTruthy();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
     await expect(page.getByText("под 13% до 1 ноября", { exact: true })).toBeVisible();
+
+    const firstPageHeight = (await cards.first().boundingBox())!.height;
+    const carouselHeight = (await page.locator(".pocket-carousel__pages").boundingBox())!.height;
+    await page.getByRole("button", { name: "Страница 2" }).click();
+    await expect(cards).toHaveCount(3);
+    const pageTwoHeights = await cards.evaluateAll((elements) =>
+      elements.map((element) => element.getBoundingClientRect().height)
+    );
+    for (const height of pageTwoHeights) expect(Math.abs(height - firstPageHeight)).toBeLessThan(1);
+    expect((await page.locator(".pocket-carousel__pages").boundingBox())!.height).toBe(carouselHeight);
   });
 }

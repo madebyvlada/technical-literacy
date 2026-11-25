@@ -53,7 +53,7 @@ export default async function AccountsPage({
   const total = state === "empty" ? 0 : demoPockets.reduce((sum, pocket) => sum + pocket.amountRubles, 0);
 
   return (
-    <main className="accounts-page">
+    <main className="accounts-page accounts-overview">
       <h1 className="type-title-l">Счета</h1>
       {(!state || state === "empty") && (
         <section className="product-panel accounts-balance" aria-label="Баланс">
